@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tiempo Sergio</title>
+    <link rel="stylesheet" href="TimeStyle.Css" />
+    <script src="TimeScript.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header class="cabecera">
+        <p class="marca"><span aria-hidden="true">✳</span> CLIMA / LOCAL</p>
+        <p class="etiqueta">DATOS ACTUALES</p>
+      </header>
+      <p class="eyebrow">EL CIELO, EN UN VISTAZO</p>
+      <h1>Tu día,<br /><span>en perspectiva.</span></h1>
+      <p class="introduccion">Descubre qué pasa ahí fuera.</p>
+      <form id="busqueda">
+        <label for="ciudad">Busca una ciudad</label>
+        <div class="controles">
+          <input
+            id="ciudad"
+            name="ciudad"
+            type="search"
+            value="Madrid"
+            placeholder="Ej.: Madrid, España"
+            required
+          />
+          <button id="buscar" type="submit">Buscar</button>
+        </div>
+      </form>
+      <p id="estado" role="status" aria-live="polite"></p>
+      <section id="resultado" aria-live="polite" hidden>
+        <div class="resumen-tiempo">
+          <div class="encabezado-ubicacion">
+            <div>
+              <p class="eyebrow">AHORA EN</p>
+              <h2 id="ubicacion"></h2>
+            </div>
+            <span class="punto-activo" aria-label="Datos actuales"></span>
+          </div>
+          <p id="descripcion"></p>
+          <p class="temperatura" id="temperatura"></p>
+        </div>
+        <dl class="detalles-tiempo">
+          <div class="detalle"><span class="detalle-icono" aria-hidden="true">↗</span><dt>Sensación térmica</dt><dd id="sensacion"></dd></div>
+          <div class="detalle"><span class="detalle-icono" aria-hidden="true">◌</span><dt>Humedad</dt><dd id="humedad"></dd></div>
+          <div class="detalle"><span class="detalle-icono" aria-hidden="true">≈</span><dt>Viento</dt><dd id="viento"></dd></div>
+        </dl>
+        <p id="actualizado" class="actualizado"></p>
+      </section>
+      <footer class="pie">Hecho para mirar hacia arriba <span aria-hidden="true">↗</span></footer>
+    </main>
+  </body>
+</html>
